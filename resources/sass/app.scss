@@ -1,0 +1,10 @@
+@import url('https://fonts.bunny.net/css?family=Nunito'); // غير مستخدم فعلياً، ممكن تحذفه
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import 'bootstrap/scss/bootstrap';
+
+@import 'tailwindcss'; // غير صحيح، هذا لا يعمل بهذه الطريقة في SCSS
+@source "../views"; // غير مفهوم - syntax غير صحيح
