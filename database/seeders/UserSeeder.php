@@ -21,8 +21,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('asdasdasd'),
             'is_admin' => true,
             'points' => 1000,
-            'rank' => 4,
-            'email_verified_at' => now(),
+            'rank' => 4
         ]);
 
         // إنشاء بعض المستخدمين للاختبار
@@ -34,7 +33,6 @@ class UserSeeder extends Seeder
             'is_admin' => false,
             'points' => 150,
             'rank' => 2,
-            'email_verified_at' => now(),
         ]);
 
         User::create([
@@ -45,9 +43,7 @@ class UserSeeder extends Seeder
             'is_admin' => false,
             'points' => 500,
             'rank' => 5,
-            'email_verified_at' => now(),
         ]);
-
   
     }
 }

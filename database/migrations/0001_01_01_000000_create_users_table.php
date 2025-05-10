@@ -16,15 +16,13 @@ return new class extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->string('username')->unique();
-            $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->string('profile_picture')->nullable();
             $table->boolean('is_admin')->default(false);
-
+            
             $table->text('bio')->nullable();
             $table->integer('points')->default(0);
             $table->integer('rank')->default(0);
-            $table->rememberToken();
             $table->timestamps();
         });
 
@@ -45,7 +43,7 @@ return new class extends Migration
     public function down(): void
     {
         Schema::dropIfExists('users');
-        Schema::dropIfExists('password_reset_tokens');
+        // Schema::dropIfExists('password_reset_tokens');
         Schema::dropIfExists('sessions');
     }
 };
